@@ -19,13 +19,14 @@ sm3-public:
 
 2.Project: implement the Rho method of reduced SM3
 
-3. Project: implement length extension attack for SM3, SHA256, etc.
+3.Project: implement length extension attack for SM3, SHA256, etc.
 
 4.Project: do your best to optimize SM3 implementation (software)
 
 5.Project: Impl Merkle Tree following RFC6962
 
 6.Project: Try to Implement this scheme
+
 
 SM2-public:
 
@@ -56,6 +57,7 @@ bitcon-public:
 eth-public:
 
 17.
+
 
 real：
 
