@@ -8,7 +8,13 @@ github账户 ：Lumoslumen
 
       
 二.所做项目简介及名称：
+1.Project: implement the naïve birthday attack of reduced SM3
 
+2.Project: implement the Rho method of reduced SM3
+
+3.Project: implement length extension attack for SM3, SHA256, etc.
+
+4.Project: do your best to optimize SM3 implementation (software)
 
 三.课程所有项目列表：
 
@@ -51,14 +57,18 @@ bitcon-public:
 
 15.Project: send a tx on Bitcoin testnet, and parse the tx data down to every bit, better write script yourself 
 
-16.
+16.Project: forge a signature to pretend that you are Satoshi
 
 
 eth-public:
 
-17.
+17.Project: research report on MP
+
 
 
 real：
 
+18.Find a key with hash value “sdu_cst_20220610” under a message composed of your name followed by your student ID. For example, “San Zhan 202000460001”.
+
+19.Find a 64-byte message under some k fulfilling that their hash value is symmetrical
 
