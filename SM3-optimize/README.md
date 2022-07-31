@@ -20,15 +20,17 @@ https://oscca.gov.cn/sca/xxgk/2010-12/17/content_1002389.shtml
 
 
 B.运行指导
+
 两者都可直接运行
 
 C.代码运行过程截图
+
 用256bit数据测试
 
 C++代码
 
 
-<img src="https://github.com/Lumoslumen/CXCY2022/blob/main/SM3-birthday%20attack/birthday.jpg" width="180" height="105">
+<img src="https://github.com/Lumoslumen/CXCY2022/blob/main/SM3-optimize/c.jpg" width="180" height="105">
 >
 python代码
 
