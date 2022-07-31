@@ -1,4 +1,5 @@
 import datetime
+import random
 # 初始值
 IV = [0X7380166f, 0X4914b2b9, 0X172442d7, 0Xda8a0600, 0Xa96f30bc, 0X163138aa, 0Xe38dee4d, 0Xb0fb0e4e]
 
