@@ -112,3 +112,27 @@ def SM3(M):
     for i in Vn:
         result += hex(i)[2:].zfill(8)#+' '  #补充0
     return(result)
+
+#生日攻击
+def Birthdayattack(n):   #通过改变n的值改变攻击的比特数 例 16bit
+    #N = pow(2, n )
+    sqrt_N = int(pow(2, n / 2))
+    list=['0']*sqrt_N
+    hexn=int(n/4)  #十六进制的长度
+    #for M in random.randint(0,sqrt_N): #随机在2^(n/2)信息空间中寻找一个M，
+    for M in range(0, sqrt_N):    #在2^(n/2)信息空间中寻找一个M，本应该随机寻找，但由于用random.randint代码报错，故用range代替
+        #求出相应的tag
+        tag = SM3(str(M))  #M对应的SM3的值
+        TAG=tag[0:hexn]    #前n比特的值
+        #寻找是否有碰撞, 即需找出TAG相同两个不同的M值，TAG(Mi)=TAG(Mj) Mi!=Mj，当有相同的TAG时，检测i，j是否相同
+        list[M]=TAG
+        for i in range(sqrt_N):
+            if((list[i]==TAG)and(i!=M)):   #当两个字符串的SM3输出值相同且量字符串不同时，有碰撞
+                print('当十六进制字符串分别为',i,'和',M,'时，发生碰撞，其SM3输出值分别为：')
+                print(SM3(str(i)))
+                print(SM3(str(M)))
+                print('前',n,'bit都为')
+                print(TAG)
+                break
+
+Birthdayattack(28)
