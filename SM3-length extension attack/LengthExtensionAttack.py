@@ -112,3 +112,43 @@ def SM3(M):
     for i in Vn:
         result += hex(i)[2:].zfill(8)#+' '  #补充0
     return(result)
+
+#长度扩展攻击
+def IterativeIV(B):
+    n = len(B)
+    V=[]
+    V.append(iv)
+    for i in range(n):
+        V.append(CF(V,B,i))
+    return V[n]
+
+
+def SM3IV(M):
+#M = input("请输入十六进制字符串：")
+    m1 = Fill(M)  #将消息M进行填充，填充后的消息m1 的比特长度为512的倍数。
+    B = Grouping(m1)   #将填充后的消息m1按512比特进行分组：m′ = B(0)B(1)· · · B(n−1）
+    Vn = IterativeIV(B)  #对m1进行迭代：
+    #Vn是二进制，转换成16进制
+    result = ''
+    for i in Vn:
+        result += hex(i)[2:].zfill(8)#+' '  #补充0
+    return(result)
+
+
+#def length_extension_attack (m1,m2):
+m1 = '12345678'
+m2 = '87654321'
+m1_f=Fill(m1)  #原始消息填充后的消息
+h1=SM3(m1_f+m2)
+ivl=SM3(m1_f)
+print(ivl)
+#iv=list[ivl]
+#iv=[]
+
+iv=[39e76d500f8f3d7289cfffa7d6c6aa7835e2f7d589d647408bcb12c86d39b2b4]
+
+print(iv)
+m2='0'*128+m2
+h2=SM3IV(m2)
+if(h1==h2):
+    print("成功")
