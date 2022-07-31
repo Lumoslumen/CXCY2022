@@ -27,6 +27,6 @@ B.运行指导
 C.代码运行过程截图
 
 以32bit为例
-<img src="https://github.com/Lumoslumen/CXCY2022/blob/main/SM3-birthday%20attack/birthday.jpg" width="180" height="105">
+<img src="https://github.com/Lumoslumen/CXCY2022/blob/main/SM3-Rho/Rho.jpg" width="180" height="105">
 >
 
