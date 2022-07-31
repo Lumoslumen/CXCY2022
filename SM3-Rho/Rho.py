@@ -112,3 +112,20 @@ def SM3(M):
     for i in Vn:
         result += hex(i)[2:].zfill(8)#+' '  #补充0
     return(result)
+
+def Rho(n):
+    N=pow(2,n)
+    hexn = int(n / 4)
+    M=hex(random.randint(0, N ))[2:]
+    list=[]
+    tag1=SM3(M)
+    while(True):
+        if (tag1[0:hexn] in list):
+            print("找到碰撞")
+            print("碰撞为:", tag1[0: hexn])
+            break
+        else:
+            list.append(tag1[0: hexn])
+            tag1=SM3(tag1)
+
+Rho(32)
