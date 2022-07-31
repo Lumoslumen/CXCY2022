@@ -35,5 +35,5 @@ C++代码
 python代码
 
 
-<img src="https://github.com/Lumoslumen/CXCY2022/blob/main/SM3-birthday%20attack/birthday.jpg" width="180" height="105">
+<img src="https://github.com/Lumoslumen/CXCY2022/blob/main/SM3-optimize/python.jpg" width="180" height="105">
 >
